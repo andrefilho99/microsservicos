@@ -7,6 +7,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
+import service.request.UserRequest;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -22,7 +23,7 @@ public class JwtFilter extends OncePerRequestFilter {
     private JwtProvider jwtProvider;
 
     @Autowired
-    private UserService userService;
+    private UserRequest userRequest;
 
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
@@ -30,7 +31,7 @@ public class JwtFilter extends OncePerRequestFilter {
         if (jwt != null && jwtProvider.validate(jwt)) {
             try {
                 String userAccount = jwtProvider.getUserAccount(jwt);
-                User user = userService.findOne(userAccount);
+                User user = userRequest.findOneUser(userAccount);
                 // pwd not necessary
                 // if jwt ok, then authenticate
                 SimpleGrantedAuthority sga = new SimpleGrantedAuthority(user.getRole());
