@@ -1,8 +1,5 @@
-package service.request;
+package br.ufrn.imd.autenticacao.controller;
 
-import model.User;
-import model.response.JwtResponse;
-import model.response.LoginForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,11 +13,15 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import security.JWT.JwtProvider;
+
+import br.ufrn.imd.autenticacao.jwt.JwtProvider;
+import br.ufrn.imd.autenticacao.model.User;
+import br.ufrn.imd.autenticacao.model.response.JwtResponse;
+import br.ufrn.imd.autenticacao.service.UserRequest;
 
 @CrossOrigin
 @RestController
-public class JwtRequest {
+public class AutenticacaoController {
 
     @Autowired
     JwtProvider jwtProvider;

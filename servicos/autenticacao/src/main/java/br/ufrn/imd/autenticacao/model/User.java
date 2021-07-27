@@ -1,6 +1,5 @@
-package model;
+package br.ufrn.imd.autenticacao.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.NaturalId;

@@ -1,13 +1,14 @@
-package security.JWT;
+package br.ufrn.imd.autenticacao.jwt;
 
-import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-import service.request.UserRequest;
+
+import br.ufrn.imd.autenticacao.model.User;
+import br.ufrn.imd.autenticacao.service.UserRequest;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
