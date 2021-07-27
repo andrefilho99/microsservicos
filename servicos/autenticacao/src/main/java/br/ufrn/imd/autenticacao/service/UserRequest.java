@@ -1,9 +1,10 @@
-package service.request;
+package br.ufrn.imd.autenticacao.service;
 
-import model.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
+
+import br.ufrn.imd.autenticacao.model.User;
 
 @Component
 public class UserRequest {

@@ -1,4 +1,4 @@
-package model.response;
+package br.ufrn.imd.autenticacao.model.response;
 
 import lombok.Data;
 

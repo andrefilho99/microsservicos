@@ -1,4 +1,4 @@
-package security.JWT;
+package br.ufrn.imd.autenticacao.jwt;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

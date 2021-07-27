@@ -1,4 +1,4 @@
-package security.JWT;
+package br.ufrn.imd.autenticacao.jwt;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -10,7 +10,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
-
 
 /**
  * Created By Zhu Lin on 1/1/2019.
