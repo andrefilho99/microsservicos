@@ -30,7 +30,7 @@ public class AutenticacaoController {
     private UserRequest userRequest;
 
     @Autowired
-    AuthenticationManager authenticationManager;
+    private AuthenticationManager authenticationManager;
 
     @PostMapping("/login")
     public ResponseEntity<JwtResponse> login(@RequestBody String nome, String senha) {

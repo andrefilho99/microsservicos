@@ -32,7 +32,6 @@ public class UserController {
         }
     }
 
-
     @PostMapping("/register")
     public ResponseEntity<User> save(@RequestBody User user) {
         try {
