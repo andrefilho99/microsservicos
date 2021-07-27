@@ -1,0 +1,3 @@
+[submodule "monolito/SpringBoot-Angular7-Online-Shopping-Store"]
+	path = monolito/SpringBoot-Angular7-Online-Shopping-Store
+	url = https://github.com/zhulinn/SpringBoot-Angular7-Online-Shopping-Store.git
